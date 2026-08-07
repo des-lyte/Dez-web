@@ -1,0 +1,17 @@
+body {
+  /* Sets the image */
+  background-image: url("your-image.jpg");
+  
+  /* Makes the image scale to fill the entire screen perfectly */
+  background-size: cover;
+  
+  /* Stops the image from repeating like tiles */
+  background-repeat: no-repeat;
+  
+  /* Centers the image so the most important part stays visible */
+  background-position: center;
+  
+  /* Keeps the background color as a backup just in case the image fails to load */
+  background-color: black;
+  color: white; 
+}
