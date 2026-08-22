@@ -1,10 +1,69 @@
-/* Change the background color of the whole page */
 body {
-    background-color: orange
-    font-family: sans-serif;
+    background-color: #1e1e24; /* A dark, modern background color */
+    color: #ffffff; /* Makes the main text white */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A cleaner font */
+    text-align: center; /* Centers everything on the screen */
+    padding-top: 50px; /* Pushes the content down a bit */
 }
 
-/* Change the color of all main headings */
 h1 {
-    color:
+    color: #fca311; /* Changes the heading to a bright orange */
+    font-size: 40px; /* Makes the heading bigger */
+}
+
+p {
+    font-size: 18px; /* Makes the paragraph easier to read */
+    line-height: 1.6; /* Adds breathing room between lines of text */
+}
+/* 1. Target the list itself to remove the bullets and set the background */
+.navbar ul {
+    list-style-type: none; /* Deletes the default bullet points */
+    margin: 0; 
+    padding: 0;
+    background-color: #2b2b36; /* A slightly lighter dark gray for the bar */
+    text-align: center; /* Centers all the links on the screen */
+}
+
+/* Styles all standard links on the page */
+a {
+    color: #fca311; /* Makes the link orange to match the heading */
+    text-decoration: none; /* Removes the default underline */
+}
+
+/* Adds the underline back only when someone hovers or taps on it */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Turns the link with the 'my-button' class into a button */
+.my-button {
+    display: inline-block; /* Allows us to add padding and margins */
+    background-color: #fca311; /* The orange background */
+    color: #1e1e24; /* Dark text so it stands out against the orange */
+    padding: 12px 24px; /* Adds space inside the button (top/bottom left/right) */
+    margin-top: 20px; /* Pushes the button down away from the text */
+    border-radius: 8px; /* Rounds the corners of the button */
+    font-weight: bold; /* Makes the button text thicker */
+    text-decoration: none; /* Ensures no underline appears */
+}
+
+
+/* 2. Target the list items to make them sit side-by-side */
+.navbar li {
+    display: inline-block; /* Forces the items to flow horizontally instead of vertically */
+}
+
+/* 3. Style the actual clickable links inside the list */
+.navbar a {
+    display: block; /* Makes the whole area clickable, not just the text */
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Removes the default blue underline */
+    padding: 16px 20px; /* Adds space around the words to make them tap-friendly */
+    font-weight: bold;
+}
+
+/* 4. Add a hover effect so the user knows they are tapping a button */
+.navbar a:hover {
+    background-color: #fca311; /* Changes to your orange color when hovered/tapped */
+    color: #1e1e24; /* Changes the text to dark so it's readable against the orange */
 }
