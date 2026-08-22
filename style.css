@@ -1,69 +1,139 @@
-body {
-    background-color: #1e1e24; /* A dark, modern background color */
-    color: #ffffff; /* Makes the main text white */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* A cleaner font */
-    text-align: center; /* Centers everything on the screen */
-    padding-top: 50px; /* Pushes the content down a bit */
-}
+/* =========================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================= */
 
-h1 {
-    color: #fca311; /* Changes the heading to a bright orange */
-    font-size: 40px; /* Makes the heading bigger */
-}
-
-p {
-    font-size: 18px; /* Makes the paragraph easier to read */
-    line-height: 1.6; /* Adds breathing room between lines of text */
-}
-/* 1. Target the list itself to remove the bullets and set the background */
-.navbar ul {
-    list-style-type: none; /* Deletes the default bullet points */
-    margin: 0; 
+/* The asterisk (*) targets EVERY element on the page. 
+   We use this to strip away the browser's default spacing so we have full control. */
+* {
+    margin: 0;
     padding: 0;
-    background-color: #2b2b36; /* A slightly lighter dark gray for the bar */
-    text-align: center; /* Centers all the links on the screen */
+    box-sizing: border-box; /* Ensures borders/padding don't make elements wider than 100% */
 }
 
-/* Styles all standard links on the page */
-a {
-    color: #fca311; /* Makes the link orange to match the heading */
-    text-decoration: none; /* Removes the default underline */
+/* This is the main background of your entire website */
+body {
+    background-color: #0f0f13; /* A very deep, sleek dark gray (almost black) */
+    color: #e0e0e0; /* Off-white text so it is easy on the eyes */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Clean, modern fonts */
+    line-height: 1.6; /* Adds breathing room between lines of text */
+    padding-bottom: 50px; /* Gives some space at the very bottom of the page */
 }
 
-/* Adds the underline back only when someone hovers or taps on it */
-a:hover {
-    text-decoration: underline;
+/* =========================================
+   2. NAVIGATION BAR (The top menu)
+   ========================================= */
+
+/* The box that holds your navigation links */
+.navbar {
+    background-color: #1c1c24; /* Slightly lighter than the body to make it stand out */
+    padding: 10px 0; /* Space above and below the links */
+    border-bottom: 2px solid #3b82f6; /* A sleek blue line under the navbar */
 }
 
-/* Turns the link with the 'my-button' class into a button */
-.my-button {
-    display: inline-block; /* Allows us to add padding and margins */
-    background-color: #fca311; /* The orange background */
-    color: #1e1e24; /* Dark text so it stands out against the orange */
-    padding: 12px 24px; /* Adds space inside the button (top/bottom left/right) */
-    margin-top: 20px; /* Pushes the button down away from the text */
-    border-radius: 8px; /* Rounds the corners of the button */
-    font-weight: bold; /* Makes the button text thicker */
-    text-decoration: none; /* Ensures no underline appears */
+/* The list inside the navbar */
+.navbar ul {
+    list-style-type: none; /* Removes the ugly default bullet points */
+    text-align: center; /* Centers the links on the screen */
 }
 
-
-/* 2. Target the list items to make them sit side-by-side */
+/* The individual list items (Home, Contact, etc.) */
 .navbar li {
-    display: inline-block; /* Forces the items to flow horizontally instead of vertically */
+    display: inline-block; /* Puts the links side-by-side in a row instead of a vertical list */
+    margin: 0 5px; /* Adds a tiny bit of space between each link */
 }
 
-/* 3. Style the actual clickable links inside the list */
+/* The actual clickable text in the navbar */
 .navbar a {
-    display: block; /* Makes the whole area clickable, not just the text */
+    display: block;
     color: #ffffff; /* White text */
-    text-decoration: none; /* Removes the default blue underline */
-    padding: 16px 20px; /* Adds space around the words to make them tap-friendly */
+    text-decoration: none; /* Removes the blue underline from links */
+    padding: 10px 15px; /* Makes the clickable area larger (great for thumbs on mobile) */
     font-weight: bold;
+    border-radius: 5px; /* Slightly rounds the corners of the invisible button area */
+    transition: 0.3s; /* Makes the hover color change smooth instead of instant */
 }
 
-/* 4. Add a hover effect so the user knows they are tapping a button */
+/* What happens when a user taps or hovers over a navbar link */
 .navbar a:hover {
-    background-color: #fca311; /* Changes to your orange color when hovered/tapped */
-    color: #1e1e24; /* Changes the text to dark so it's readable against the orange */
+    background-color: #3b82f6; /* Turns the background blue */
+    color: #ffffff;
+}
+
+/* =========================================
+   3. TYPOGRAPHY & HEADINGS (Your Titles)
+   ========================================= */
+
+/* Targets all main titles (like "DEZLYTE SOCIAL") */
+h1 {
+    color: #3b82f6; /* A bright, modern electric blue */
+    text-align: center; /* Centers the title */
+    margin-top: 30px; /* Pushes the title down away from the navbar */
+    font-size: 32px; /* Makes the title nice and large */
+    letter-spacing: 2px; /* Spreads the letters out slightly for a cinematic look */
+}
+
+/* Targets subheadings (like "Intro") */
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px; /* Pushes the content below it down */
+    font-size: 22px;
+}
+
+/* Centers standard paragraphs that are directly inside the body */
+p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   4. MEDIA & LISTS (Videos and Images)
+   ========================================= */
+
+/* Targets the ordered list (<ol>) holding your YouTube and TikTok sections */
+ol {
+    max-width: 600px; /* Prevents the list from getting too wide on big screens */
+    margin: 0 auto; /* The magic trick to perfectly center a box on the screen */
+    padding: 20px;
+}
+
+/* Adds space between the YouTube section and the TikTok section */
+ol li {
+    margin-bottom: 40px; 
+    font-size: 18px;
+    font-weight: bold;
+    color: #3b82f6;
+}
+
+/* Makes sure ANY video or image on your site automatically shrinks to fit a mobile screen */
+video, img {
+    max-width: 100%; /* Prevents the video/image from bleeding off the edge of the phone */
+    height: auto; /* Keeps the aspect ratio from stretching */
+    border-radius: 12px; /* Rounds the corners of your videos and images */
+    margin-top: 10px; /* Adds space between the title (e.g., "YOUTUBE") and the actual video */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Adds a cool shadow behind your media */
+}
+
+/* =========================================
+   5. BUTTONS & LINKS 
+   ========================================= */
+
+/* Targets specific links that you want to look like buttons (e.g., "VISUAL ART") */
+.my-button {
+    display: inline-block;
+    background-color: #fca311; /* A bright, energetic orange */
+    color: #121212; /* Dark text so it pops against the orange */
+    padding: 12px 25px; /* Makes the button thick and easy to tap */
+    margin: 10px;
+    text-decoration: none; /* Removes the underline */
+    font-weight: bold;
+    border-radius: 8px; /* Rounds the edges of the button */
+    border: none; /* Removes default borders */
+    text-align: center;
+}
+
+/* Centers the button container area at the bottom of your page */
+.button-container {
+    text-align: center;
+    margin-top: 30px;
 }
