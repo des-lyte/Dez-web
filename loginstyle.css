@@ -1,0 +1,86 @@
+/* =========================================
+   7. LOGIN PAGE STYLES (index.html)
+   ========================================= */
+
+/* The floating card holding the form */
+.login-container {
+    background-color: #1c1c24; /* Matches your navbar */
+    max-width: 400px; /* Keeps the form from getting too wide */
+    margin: 80px auto; /* Centers the box on the screen */
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+    border-top: 5px solid #fca311; /* An orange accent line at the top */
+    text-align: center;
+}
+
+.login-container p {
+    color: #a0a0a0; /* Grey text for the subtitle */
+    margin-bottom: 30px;
+}
+
+/* Spaces out the email and password fields */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left; /* Forces the labels to the left edge of the box */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Styles the actual typing boxes */
+.input-group input {
+    width: 100%; /* Makes the input stretch all the way across */
+    padding: 14px;
+    background-color: #2b2b36; /* Dark background for the input */
+    border: 1px solid #3b82f6; /* Blue border */
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Changes the border to orange when you tap to type */
+.input-group input:focus {
+    outline: none;
+    border-color: #fca311;
+}
+
+/* Modifies your standard button to fit the form perfectly */
+.submit-btn {
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Spacing and colors for the links at the bottom */
+.login-links {
+    margin-top: 25px;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.login-links a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+/* A stealthy, hollow button for skipping the login */
+.skip-btn {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: transparent;
+    border: 1px solid #a0a0a0;
+    color: #a0a0a0;
+    padding: 8px 16px;
+    font-size: 12px;
+}
