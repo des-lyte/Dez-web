@@ -2,47 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login Page</title> 
-    <!-- this is style layout for the login page -->
-    <style>
-        body{
-            background-color: orange; text-align: center;
-        }
-        h1 {
-            color:#05ffc9; text-align: center;
-        }
-        p {color: black;
-        i{
-            color:#05c9ff;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Connects to your main dark theme CSS -->
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <b id="p"></b>
-    <div>
-    <h1><b><u>
-        Welcome Back
-    </u></b></h1>
-    <p>Please log in to <i>continue.</i></p>
-    </div>
-    
-    <div style="text-align:center">
-    <form>
-        <label type="Email">Email</label>
-        <input for="Email" id="Email"><br>
-        <label type="password">Password</label>
-        <input for="Password" id="Password">
-        <b><input style="background-color: black; color:white" type="submit"></b>
-    </form>
-    </div>
-    <!-- Pretend there is a login form here -->
 
-    <!-- Here is the link that takes them to the Home page -->
-    <p> <a href="home.html">forget password</a></p>
-    <p>Don't have an account? <a href="signup.html">Sign up</a>.</p><br>
+    <!-- Wraps everything in a centered box -->
+    <div class="login-container">
+        
+        <h1>Welcome Back</h1>
+        <p>Please log in to continue.</p>
 
-    <!-- Or as a styled button -->
-    <a href="home.html" class="my-button">Go to Home Page</a>
+        <!-- The Form -->
+        <form action="home.html">
+            <div class="input-group">
+                <label for="user-email">Email</label>
+                <!-- type="email" ensures the phone keyboard shows the '@' symbol -->
+                <input type="email" id="user-email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="user-password">Password</label>
+                <!-- type="password" hides the text as dots -->
+                <input type="password" id="user-password" placeholder="Enter your password" required>
+            </div>
+
+            <!-- Reusing your my-button class for consistency -->
+            <button type="submit" class="my-button submit-btn">Log In</button>
+        </form>
+
+        <div class="login-links">
+            <a href="home.html">Forgot password?</a><br>
+            Don't have an account? <a href="signup.html">Sign up</a>
+        </div>
+
+        <!-- Just in case they want to skip for now -->
+        <a href="home.html" class="my-button skip-btn">Skip to Home</a>
+        
+    </div>
 
 </body>
 </html>
