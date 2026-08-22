@@ -137,3 +137,24 @@ video, img {
     text-align: center;
     margin-top: 30px;
 }
+
+/* =========================================
+   6. INTRO TEXT BOX
+   ========================================= */
+.intro-box {
+    background-color: #1c1c24; /* Matches your dark navbar */
+    max-width: 650px; /* Prevents the text from stretching too wide on big screens */
+    margin: 30px auto; /* The 'auto' perfectly centers the box on the page */
+    padding: 25px; /* Adds breathing room inside the box */
+    border-radius: 12px; /* Smooth, rounded corners */
+    border-left: 5px solid #3b82f6; /* A cool blue accent line on the left side */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4); /* Adds a shadow so it floats off the background */
+}
+
+.intro-box p {
+    color: #e0e0e0; /* Off-white text */
+    font-size: 17px;
+    line-height: 1.8; /* Extra space between lines makes long paragraphs easier to read */
+    text-align: center;
+    margin: 0; /* Removes default paragraph spacing so it fits perfectly in the box */
+}
